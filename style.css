@@ -1,0 +1,34 @@
+body {
+  background-color: #000;
+  color: #33ff33;
+  font-family: 'Courier New', Courier, monospace;
+  font-size: 16px;
+  padding: 20px;
+}
+
+.terminal {
+  white-space: pre-wrap;
+  margin-bottom: 10px;
+}
+
+#terminal-input {
+  background: transparent;
+  border: none;
+  color: #33ff33;
+  font-family: inherit;
+  font-size: 16px;
+  outline: none;
+  width: 50%;
+}
+
+.cursor {
+  display: inline-block;
+  width: 10px;
+  background: #33ff33;
+  animation: blink 1s steps(1) infinite;
+}
+
+@keyframes blink {
+  0%, 50% { background: #33ff33; }
+  51%, 100% { background: transparent; }
+}
