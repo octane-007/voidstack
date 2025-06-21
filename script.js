@@ -45,7 +45,7 @@ input.addEventListener("keydown", function (e) {
     }
 
     setTimeout(() => {
-      window.location.href = "https://0ctane.space/Vel0city"; // replace with your real URL
+      window.location.href = "https://0ctane.space/vel0city"; // replace with your real URL
     }, 2000);
   }
 });
