@@ -7,7 +7,7 @@ const lines = [
   "Name: 0ctane",
   "Interests: Cybersecurity,Gaming,Programming",
   "Project: Vel0city",
-  "Project Details: Build a free learning resource hub for everything about cybersecurity,privacy,development and programming for everyone.",
+  "Details: Build a free learning resource hub for everything about cybersecurity,privacy,development and programming for everyone.",
   "Features: Fully free open source platform with no sign ups,ads or trackers",
   "          biweekly blogs",
   "          list of curated high quality free learning resources across the internet",
