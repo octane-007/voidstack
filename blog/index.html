@@ -1,40 +1,53 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" class="bg-[#0a0a0a] text-gray-300 h-full">
+
 <head>
   <meta charset="UTF-8" />
   <title>VoidStack Blog</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <script src="https://cdn.tailwindcss.com"></script>
   <link rel="stylesheet" href="css/style.css" />
 </head>
-<body>
-  <nav><a href="/">← Home</a></nav>
 
-  <main class="container">
-    <h1 class="glow">VoidStack Blog</h1>
+<body class="flex flex-col min-h-screen bg-[#0a0a0a] text-gray-300">
 
-    <div class="flex flex-col md:flex-row gap-6">
-      <div id="sidebar" class="w-full md:w-1/4"></div>
+  <!-- Navbar -->
+  <nav class="bg-[#0a0a0a] border-b border-gray-800 px-6 py-4 text-sm">
+    <div class="max-w-screen-xl mx-auto flex items-center gap-6">
+      <a href="/" class="font-bold text-base hover:glow">VoidStack</a>
+      <a href="/" class="hover:glow">← Home</a>
+      <a href="/blog" class="hover:glow">Blog</a>
+      <a href="/resources" class="hover:glow">Resources</a>
+      <a href="/" class="hover:glow">Labs</a>
+    </div>
+  </nav>
 
-      <div class="w-full md:w-3/4">
-        <div class="post-link">
-          <h2><a href="posts/whoami.html">Whoami – The Beginning</a></h2>
-          <p class="excerpt">Why I started VoidStack. A personal intro + vision.</p>
-        </div>
+  <!-- Main content -->
+  <main class="flex-grow max-w-4xl mx-auto px-6 py-10 text-left">
+    <h1 class="text-4xl font-bold mb-10 glow">Blog</h1>
 
-        <div class="post-link">
-          <h2><a href="posts/lab-setup.html">00 – Setting Up Your Lab</a></h2>
-          <p class="excerpt">Step-by-step: Create a home pentesting lab with free tools.</p>
-        </div>
+    <div class="flex flex-col gap-6">
+      <div class="post-link">
+        <h2 class="text-2xl font-semibold mb-1">
+          <a href="posts/whoami.html" class="text-gray-100 hover:underline">Whoami – The Beginning</a>
+        </h2>
+        <p class="text-gray-400">Why I started VoidStack. A personal intro + vision.</p>
+      </div>
+
+      <div class="post-link">
+        <h2 class="text-2xl font-semibold mb-1">
+          <a href="posts/lab-setup.html" class="text-gray-100 hover:underline">00 – Setting Up Your Lab</a>
+        </h2>
+        <p class="text-gray-400">Step-by-step: Create a home pentesting lab with free tools.</p>
       </div>
     </div>
   </main>
 
-  <footer>Made with 💻 by 0ctane — No trackers. No nonsense.</footer>
-  <script>
-    fetch('/blog/sidebar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
-  </script>
+  <!-- Footer -->
+  <footer class="bg-[#0a0a0a] border-t border-gray-800 text-center text-sm text-gray-500 py-6">
+    Made with 💻 by 0ctane — No trackers. No nonsense.
+  </footer>
+
 </body>
+
 </html>

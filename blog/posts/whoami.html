@@ -1,60 +1,74 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Whoami – VoidStack</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <main class="container">
     <div class="flex flex-col md:flex-row gap-6">
-      <div id="sidebar" class="w-full md:w-1/4"></div>
+     
+      <nav class="bg-[#0a0a0a] border-b border-gray-800 px-6 py-4 text-sm">
+    <div class="max-w-screen-xl mx-auto flex items-center gap-6">
+      <a href="/" class="font-bold text-base hover:glow">VoidStack</a>
+      <a href="/" class="hover:glow">← Home</a>
+      <a href="/blog" class="hover:glow">Blog</a>
+      <a href="/resources" class="hover:glow">Resources</a>
+      <a href="/" class="hover:glow">Labs</a>
+    </div>
+  </nav>
 
       <div class="w-full md:w-3/4">
         <a href="../index.html" class="back-link">← Back to Blog</a>
         <section id="whoami" class="prose max-w-3xl mx-auto p-6 text-white">
-  <h1 class="text-4xl font-bold mb-4 hover-glow">whoami</h1>
-  <p>
-    Hey, I’m <strong>0ctane</strong> — a final-year school student trying to carve a path into cybersecurity, ethical hacking, and system design.
-    <br />
-    <strong>Vel0city</strong> is my first proper web project — a simple, free platform to help others get started without the chaos I went through.
-  </p>
+          <h1 class="text-4xl font-bold mb-4 hover-glow">whoami</h1>
+          <p>
+            Hey, I’m <strong>0ctane</strong> — a final-year school student trying to carve a path into cybersecurity,
+            ethical hacking, and system design.
+            <br />
+            <strong>Vel0city</strong> is my first proper web project — a simple, free platform to help others get
+            started without the chaos I went through.
+          </p>
 
-  <p>
-    When I first got into this space, I spent more time finding good resources than actually learning. It felt like every path was either paywalled, too surface-level, or just clickbait. I built Vel0city so no one else has to waste that time. It’s not perfect — and I’m still learning — but it’s real.
-  </p>
+          <p>
+            When I first got into this space, I spent more time finding good resources than actually learning. It felt
+            like every path was either paywalled, too surface-level, or just clickbait. I built Vel0city so no one else
+            has to waste that time. It’s not perfect — and I’m still learning — but it’s real.
+          </p>
 
-  <h2 class="text-2xl font-semibold mt-8 mb-4">what I’ve done so far</h2>
-  <ul class="list-disc pl-6 space-y-2">
-    <li>Built this entire site from scratch using Jekyll, GitHub Pages, TailwindCSS, and deployed a separate Vite version with Netlify</li>
-    <li>Configured my own custom DNS records, reverse proxy setups, and Cloudflare protection</li>
-    <li>Self-hosted media servers like Jellyfin, private web apps, and development environments</li>
-    <li>Set up basic CI/CD pipelines with GitHub Actions for deployments</li>
-    <li>Used Docker for containerized services and dabbled with VMs for isolated testing</li>
-    <li>Comfortable with Java, Bash scripting, and Linux server management</li>
-    <li>Learning my way through Hack The Box, TryHackMe, and CTF platforms — documenting every step here</li>
-    <li>Planning a full Raspberry Pi-based homelab, internal networking, AD setup, and maybe even a personal VPN and logging stack</li>
-    <li>And yeah, when I’m not knee-deep in configs and exploits, I occasionally queue up for CS2 Premier and try to clutch a round or two</li>
-  </ul>
+          <h2 class="text-2xl font-semibold mt-8 mb-4">what I’ve done so far</h2>
+          <ul class="list-disc pl-6 space-y-2">
+            <li>Built this entire site from scratch using Jekyll, GitHub Pages, TailwindCSS, and deployed a separate
+              Vite version with Netlify</li>
+            <li>Configured my own custom DNS records, reverse proxy setups, and Cloudflare protection</li>
+            <li>Self-hosted media servers like Jellyfin, private web apps, and development environments</li>
+            <li>Set up basic CI/CD pipelines with GitHub Actions for deployments</li>
+            <li>Used Docker for containerized services and dabbled with VMs for isolated testing</li>
+            <li>Comfortable with Java, Bash scripting, and Linux server management</li>
+            <li>Learning my way through Hack The Box, TryHackMe, and CTF platforms — documenting every step here</li>
+            <li>Planning a full Raspberry Pi-based homelab, internal networking, AD setup, and maybe even a personal VPN
+              and logging stack</li>
+            <li>And yeah, when I’m not knee-deep in configs and exploits, I occasionally queue up for CS2 Premier and
+              try to clutch a round or two</li>
+          </ul>
 
-  <h2 class="text-2xl font-semibold mt-8 mb-4">why this exists</h2>
-  <p>
-    I’m not here to sell anything or pretend I know everything — because I don’t. I’m still learning every day. This site is part of that process.
-    <br />
-    If it helps even one beginner avoid the confusion I faced — mission complete.
-  </p>
+          <h2 class="text-2xl font-semibold mt-8 mb-4">why this exists</h2>
+          <p>
+            I’m not here to sell anything or pretend I know everything — because I don’t. I’m still learning every day.
+            This site is part of that process.
+            <br />
+            If it helps even one beginner avoid the confusion I faced — mission complete.
+          </p>
 
-  <p class="mt-6 font-mono text-sm">— 0ctane</p>
-</section>
+          <p class="mt-6 font-mono text-sm">— 0ctane</p>
+        </section>
 
-    </div>
+      </div>
   </main>
-  <script>
-    fetch('/blog/sidebar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
-  </script>
+
 </body>
+
 </html>

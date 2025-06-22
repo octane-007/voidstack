@@ -1,31 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>00 – Lab Setup | VoidStack</title>
   <link rel="stylesheet" href="../css/style.css">
 </head>
+
 <body>
   <main class="container">
     <div class="flex flex-col md:flex-row gap-6">
-      <div id="sidebar" class="w-full md:w-1/4"></div>
-:w-3/4">
-        <a href="../index.html" class="back-link">← Back to Blog</a>
-        <h1 class="glow">00 — Setting Up Your Pentesting Lab</h1>
-        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quod?
-          Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, distinctio.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, autem.
-          Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          Vitae mollitia suscipit optio dolore cumque enim.
-        </p>
-        
+      <nav class="bg-[#0a0a0a] border-b border-gray-800 px-6 py-4 text-sm">
+    <div class="max-w-screen-xl mx-auto flex items-center gap-6">
+      <a href="/" class="font-bold text-base hover:glow">VoidStack</a>
+      <a href="/" class="hover:glow">← Home</a>
+      <a href="/blog" class="hover:glow">Blog</a>
+      <a href="/resources" class="hover:glow">Resources</a>
+      <a href="/" class="hover:glow">Labs</a>
+    </div>
+  </nav>
+      :w-3/4">
+      <a href="../index.html" class="back-link">← Back to Blog</a>
+      <h1 class="glow">00 — Setting Up Your Pentesting Lab</h1>
+      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolores, quod?
+        Lorem ipsum dolor sit, amet consectetur adipisicing elit. Aliquam, distinctio.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, autem.
+        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+        Vitae mollitia suscipit optio dolore cumque enim.
+      </p>
+
   </main>
-  <script>
-    fetch('/blog/sidebar.html')
-      .then(res => res.text())
-      .then(data => {
-        document.getElementById('sidebar').innerHTML = data;
-      });
-  </script>
 </body>
+
 </html>
