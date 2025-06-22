@@ -1,70 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-  <head>
-    <link rel="icon" type="image/png" href="/voidstack/favicon/favicon.png" />
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Vel0city Blogs</title>
-    <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet">
-    <style>
-      body {
-        font-family: 'Fira Code', monospace;
-        background-color: #0a0a0a;
-        color: #e0e0e0;
-      }
-      .glow {
-        text-shadow: 0 0 5px #00ff00, 0 0 10px #00ff00;
-      }
-      .hover-glow:hover {
-        text-shadow: 0 0 5px #00ff00, 0 0 15px #00ff00;
-        color: #00ff00;
-        transition: all 0.2s ease-in-out;
-      }
-    </style>
-  </head>
-  <body class="overflow-x-hidden">
-    <!-- Navbar -->
-    <nav class="fixed top-0 left-0 w-full z-50 flex justify-between items-center p-4 border-b border-gray-700 bg-black/80 backdrop-blur">
-      <h1 class="text-green-400 text-xl font-bold glow">Vel0city</h1>
-      <ul class="flex space-x-4 text-sm">
-        <li><a href="/" class="hover-glow">Home</a></li>
-        <li><a href="#latest" class="hover-glow">Latest</a></li>
-        <li><a href="#all-posts" class="hover-glow">All Posts</a></li>
-        <li><a href="#contact" class="hover-glow">Contact</a></li>
-      </ul>
-    </nav>
+---
+layout: default
+title: Blog
+---
 
-    <main class="pt-32 px-4 sm:px-6 max-w-5xl mx-auto">
-      <!-- Latest Post -->
-      <section id="latest" class="mb-16">
-        <h2 class="text-3xl font-semibold mb-4 glow">Latest Blog</h2>
-        <div class="p-6 border border-gray-700 hover:shadow-lg hover:border-green-400 transition duration-300">
-          <h3 class="text-green-400 text-2xl font-semibold mb-2">Whoami – The Journey Begins</h3>
-          <p class="text-gray-400">An introduction to the creator, the mission of Vel0city, and the reason behind launching this open learning space for ethical hacking and cyber forensics.</p>
-          <a href="posts/whoami.html" class="inline-block mt-4 px-4 py-2 border border-green-400 text-green-400 hover:bg-green-400 hover:text-black transition">Read More</a>
-        </div>
-      </section>
+<h1 class="text-3xl text-green-400 font-bold glow mb-6">VoidStack Blog</h1>
 
-      <!-- All Posts -->
-      <section id="all-posts">
-        <h2 class="text-2xl font-semibold mb-6 glow">All Posts</h2>
-        <div class="space-y-4">
-          <div class="p-4 border border-gray-700 hover:shadow-lg hover:border-green-400 transition duration-300">
-            <h4 class="text-green-400 font-semibold text-lg">00 - Beginning: Setting up a Home Pentesting Lab</h4>
-            <p class="text-gray-400">A complete guide to setting up your virtual lab using VirtualBox, Ubuntu, Kali and test targets like Metasploitable or TryHackMe VMs.</p>
-            <a href="posts/00_init.html" class="inline-block mt-2 text-green-400 hover-glow text-sm">Read More →</a>
-          </div>
-          <div class="p-4 border border-gray-700 hover:shadow-lg hover:border-green-400 transition duration-300">
-            <h4 class="text-green-400 font-semibold text-lg">01 - Networking Basics</h4>
-            <p class="text-gray-400">Understand IP addresses, DNS, domains, and run basic lab activities with ping, netstat, traceroute and nslookup.</p>
-            <a href="posts/01_networks.html" class="inline-block mt-2 text-green-400 hover-glow text-sm">Read More →</a>
-          </div>
-        </div>
-      </section>
-
-      <footer class="text-center py-6 border-t border-gray-700 text-gray-500 text-sm mt-12">
-        <p>Made with ❤️ by 0ctane | No sign-ups. No ads.</p>
-      </footer>
-    </main>
-  </body>
-</html>
+<ul class="space-y-4">
+  {% for post in site.posts %}
+    <li class="border border-gray-700 p-4 hover:border-green-400 transition">
+      <h2 class="text-green-400 text-xl font-semibold">{{ post.title }}</h2>
+      <p class="text-gray-400 text-sm mb-2">{{ post.date | date: "%B %d, %Y" }}</p>
+      <a href="{{ post.url | relative_url }}" class="text-green-400 hover-glow text-sm">Read More →</a>
+    </li>
+  {% endfor %}
+</ul>
