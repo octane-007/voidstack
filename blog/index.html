@@ -60,9 +60,40 @@
           </div>
         </div>
       </section>
+
       <footer class="text-center py-6 border-t border-gray-700 text-gray-500 text-sm mt-12">
         <p>Made with ❤️ by 0ctane | No sign-ups. No ads.</p>
       </footer>
     </main>
   </body>
+  <script>
+      const form = document.getElementById('contactForm');
+      const successMessage = document.getElementById('formSuccess');
+
+      form.addEventListener('submit', async function (e) {
+        e.preventDefault();
+
+        const formData = new FormData(form);
+
+        try {
+          const response = await fetch("https://formspree.io/f/manjpwnr", {
+            method: "POST",
+            headers: {
+              'Accept': 'application/json'
+            },
+            body: formData
+          });
+
+          if (response.ok) {
+            successMessage.classList.remove('hidden');
+            form.reset();
+          } else {
+            alert("❌ Error sending message. Please try again.");
+          }
+        } catch (err) {
+          console.error("Form error:", err);
+          alert("❌ Submission failed. Check console.");
+        }
+      });
+  </script>
 </html>
