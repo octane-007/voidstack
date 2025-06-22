@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>VoidStack Blog</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <nav><a href="/">← Home</a></nav>
+
+  <main class="container">
+    <h1 class="glow">VoidStack Blog</h1>
+
+    <div class="post-link">
+      <h2><a href="posts/whoami.html">Whoami – The Beginning</a></h2>
+      <p class="excerpt">Why I started VoidStack. A personal intro + vision.</p>
+    </div>
+
+    <div class="post-link">
+      <h2><a href="posts/lab-setup.html">00 – Setting Up Your Lab</a></h2>
+      <p class="excerpt">Step-by-step: Create a home pentesting lab with free tools.</p>
+    </div>
+  </main>
+
+  <footer>Made with 💻 by 0ctane — No trackers. No nonsense.</footer>
+</body>
+<div id="sidebar"></div>
+<script>
+  fetch('sidebar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+    });
+</script>
+
+</html>

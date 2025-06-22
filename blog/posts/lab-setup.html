@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>00 – Lab Setup | VoidStack</title>
+  <link rel="stylesheet" href="../css/style.css">
+</head>
+<body>
+  <main class="container">
+    <a href="../index.html" class="back-link">← Back to Blog</a>
+    <h1 class="glow">00 — Setting Up Your Pentesting Lab</h1>
+    <p><em>Posted: June 22, 2025</em></p>
+    <p>Before hacking the world, you need a safe playground.</p>
+
+    <h2>🧰 Tools Required</h2>
+    <ul>
+      <li>VirtualBox (or VMware)</li>
+      <li>Kali Linux ISO</li>
+      <li>Metasploitable2 / OWASP Juice Shop</li>
+    </ul>
+
+    <h2>🚀 Steps</h2>
+    <ol>
+      <li>Install VirtualBox</li>
+      <li>Download Kali and Metasploitable</li>
+      <li>Create VMs inside VirtualBox</li>
+      <li>Connect them on a host-only network</li>
+      <li>Hack without fear 🔐</li>
+    </ol>
+
+    <p>We’ll cover lab activities in upcoming posts. Stay tuned.</p>
+  </main>
+</body>
+<script>
+  fetch('../sidebar.html')
+    .then(res => res.text())
+    .then(data => {
+      document.getElementById('sidebar').innerHTML = data;
+    });
+</script>
+</html>
