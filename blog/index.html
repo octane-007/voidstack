@@ -8,7 +8,7 @@ title: Blog
 <ul class="space-y-6">
   {% for post in site.posts %}
     <li class="border border-gray-700 p-4 hover:border-green-400 transition">
-      <h2 class=" text-xl font-semibold">{{ post.title }}</h2>
+      <h2 class="text-5xl md:text-6xl font-bold mb-12 glow font-mono">{{ post.title }}</h2>
       <p class="text-gray-400 text-sm">{{ post.date | date: "%B %d, %Y" }}</p>
       <a href="{{ post.url | relative_url }}" class="text-green-400 hover-glow text-sm">Read More →</a>
     </li>
